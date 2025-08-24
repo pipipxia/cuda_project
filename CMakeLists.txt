@@ -8,6 +8,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CUDA_STANDARD 17)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
+<<<<<<< HEAD
+=======
+# 设置为debug编译模式
+set(CMAKE_BUILD_TYPE Debug)
+
+>>>>>>> 261b8c4 (cuda project init)
 # # =============== GPU 架构 ===============
 # # 本地 GPU + 常见兜底，开发/单机足够
 # set(CMAKE_CUDA_ARCHITECTURES "native") #"native;75;86;89"

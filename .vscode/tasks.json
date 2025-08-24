@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "允许非root用户附加进程",
+            "type": "shell",
+            "command": "./compile.sh"
+            // "command": "echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope ",
+            // "dependsOn": ["构建项目"]
+        },
+        {
+            "label": "构建项目",
+            "type": "shell",
+            "command": "make -j24",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+        }
+    ]
+}
