@@ -1,7 +1,3 @@
 __pycache__/
-<<<<<<< HEAD
-.vscode/
-=======
->>>>>>> 261b8c4 (cuda project init)
 build/
 *.so

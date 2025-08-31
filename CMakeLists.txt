@@ -8,12 +8,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CUDA_STANDARD 17)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
-<<<<<<< HEAD
-=======
 # 设置为debug编译模式
 set(CMAKE_BUILD_TYPE Debug)
 
->>>>>>> 261b8c4 (cuda project init)
 # # =============== GPU 架构 ===============
 # # 本地 GPU + 常见兜底，开发/单机足够
 # set(CMAKE_CUDA_ARCHITECTURES "native") #"native;75;86;89"
@@ -36,6 +33,8 @@ add_subdirectory(3rdparty/pybind11)
 file(GLOB_RECURSE SRC_FILES
      "${CMAKE_SOURCE_DIR}/src/*.cpp"
      "${CMAKE_SOURCE_DIR}/src/*.cu")
+
+message(SRC_FILES ${SRC_FILES})
 
 # =============== 创建 Python 扩展 ===============
 pybind11_add_module(cuda_op MODULE ${SRC_FILES})
